@@ -19,13 +19,15 @@ const eqArrays = function (actual, expected){
 }
 const assertArraysEqual = function (flag,actual,expected){
   if(flag === true){
-    return `✅️ Assertion Passed: ${actual} === ${expected}`;
+    console.log(`✅️ Assertion Passed: ${actual} === ${expected}`);
   }
   if(flag === false){
-    return `❌️ Assertion Failed: ${actual} !== ${expected}`;
+    console.log(`❌️ Assertion Failed: ${actual} !== ${expected}`);
   }
 }
-console.log(eqArrays([1, 2, 3], [1, 2, 3]));// => true
-console.log(eqArrays([1, 2, 3], [3, 2, 1])); // => false
-console.log(eqArrays(["1", "2", "3"], ["1", "2", "3"])); // => true
-console.log(eqArrays(["1", "2", "3"], ["1", "2", 3])); // => false
+
+
+module.exports = {
+  eqA : eqArrays,
+  aA : assertArraysEqual
+}
