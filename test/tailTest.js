@@ -1,10 +1,13 @@
 
 const tail = require("../tail.js");
-const assertArraysEqualObj = require("../assertArraysEqual");
+const assertArraysEqual = require("../assertArraysEqual");
+const eqArrays = require("../eqArrays.js");
+const assertEqual = require("../assertEqual");
 
 const result = tail(["Hello", "Lighthouse", "Labs"]);
-assertArraysEqualObj.eqA(result, ["Lighthouse", "Labs"]); 
+assertArraysEqual(eqArrays(result, ["Lighthouse", "Labs"]),result,["Lighthouse", "Labs"]); 
+
 
 const words = ["Yo Yo", "Lighthouse", "Labs"];
 tail(words); 
-assertArraysEqualObj.eqA(words.length, 3);
+assertEqual(words.length, 3);

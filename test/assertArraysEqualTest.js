@@ -1,7 +1,8 @@
 
-const assertArraysEqualObj = require('../assertArraysEqual');
+const assertArraysEqual = require('../assertArraysEqual');
+const eqArrays = require("../eqArrays");
 
-assertArraysEqualObj.eqA([1, 2, 3], [1, 2, 3]);// => true
-assertArraysEqualObj.eqA([1, 2, 3], [3, 2, 1]); // => false
-assertArraysEqualObj.eqA(["1", "2", "3"], ["1", "2", "3"]); // => true
-assertArraysEqualObj.eqA(["1", "2", "3"], ["1", "2", 3]); // => false
+assertArraysEqual(eqArrays([1, 2, 3], [1, 2, 3]),[1, 2, 3],[1, 2, 3]);// => true
+assertArraysEqual(eqArrays([1, 2, 3], [3, 2, 1]),[1, 2, 3],[3, 2, 1]); // => false
+assertArraysEqual(eqArrays(["1", "2", "3"], ["1", "2", "3"]),["1", "2", "3"], ["1", "2", "3"]); // => true
+assertArraysEqual(eqArrays(["1", "2", "3"], ["1", "2", 3]),["1", "2", "3"], ["1", "2", 3]); // => false
