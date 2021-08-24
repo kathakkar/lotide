@@ -1,22 +1,7 @@
-const eqArrays = function (actual, expected){
-  var flag = false;
-  if(actual.length === expected.length){
-    for(let i = 0; i < actual.length; i++) {
-      if(actual[i] !== expected[i]){
-        flag = false;
-      }
-      else
-      {
-        flag = true;
-      }
-    }
-    return assertArraysEqual(flag,actual,expected);
-  }
-  else{
-    return assertArraysEqual(false,actual,expected);
-  }
 
-}
+const eqArrays = require("./eqArrays");
+
+
 const assertArraysEqual = function (flag,actual,expected){
   if(flag === true){
     console.log(`✅️ Assertion Passed: ${actual} === ${expected}`);
@@ -27,7 +12,4 @@ const assertArraysEqual = function (flag,actual,expected){
 }
 
 
-module.exports = {
-  eqA : eqArrays,
-  aA : assertArraysEqual
-}
+module.exports = assertArraysEqual;
