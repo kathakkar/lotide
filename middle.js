@@ -1,11 +1,4 @@
-//TEST FUNCTION
-const eqArrays = function(array) {
-  return assertArraysEqual(array);
-}
 
-const assertArraysEqual = function(array) {
-  console.log(`Middle Elements of array [${array}] : [${middle(array)}]`); 
-}
 
 // ACTUAL FUNCTION
 const middle = function(array) {
@@ -24,15 +17,10 @@ const middle = function(array) {
   else
   {
     return resultArray;
+    //console.log(resultArray);
   }
 
   
 }
 
-
-eqArrays([1, 2, 3]); 
-eqArrays([1, 2, 3, 4, 5]); 
-eqArrays([1, 2, 3, 4]); 
-eqArrays([1, 2, 3, 4, 5, 6]); 
-eqArrays([1]); 
-eqArrays([1, 2]); 
+module.exports = middle;
