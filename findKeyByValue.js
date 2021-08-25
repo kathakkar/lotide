@@ -1,12 +1,4 @@
-//TEST FUNCTION
-const assertEqual = function(actual, expected) {
-  if(actual === expected){
-    console.log(`✅️ Assertion Passed: ${actual} === ${expected}`);
-  }
-  if(actual !== expected){
-    console.log(`❌️ Assertion Failed: ${actual} !== ${expected}`);
-  }
-};
+//TEST FUNCTI
 
 const findKeyByValue = function(obj,valueTofind){
   const key = Object.keys(obj) 
